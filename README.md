@@ -22,17 +22,10 @@ use this repo as src for nixpkgs st override.
 
 ## Pretty stuff
 
-<<<<<<< HEAD
-- Compatibility with `Xresources` and `pywal` for dynamic colors. The `Xdefaults` file shows a usage example.
-- Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
-- Transparency/alpha, which is also adjustable from your `Xresources`.
-- Default font is system "mono" at 14pt, meaning the font will match your system font.
-=======
 + Compatibility with `Xresources` and `pywal` for dynamic colors.
 + Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
 + Transparency/alpha, which is also adjustable from your `Xresources`.
 + Default font is system "mono" at 14pt, meaning the font will match your system font.
->>>>>>> upstream/master
 
 ## Other st patches
 
