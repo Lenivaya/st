@@ -42,9 +42,14 @@ static unsigned int tripleclicktimeout = 600;
 /* alt screens */
 int allowaltscreen = 1;
 
-/* frames per second st should at maximum draw to the screen */
-static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+/*
+ * draw latency range in ms - from new content/keypress/etc until drawing.
+ * within this range, st draws when content stops arriving (idle). mostly it's
+ * near minlatency, but it waits longer for slow updates to avoid partial draw.
+ * low minlatency will tear/flicker more, as it can "detect" idle too early.
+ */
+static double minlatency = 8;
+static double maxlatency = 33;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
@@ -63,6 +68,18 @@ int ximspot_update_interval = 1000;
  * thickness of underline and bar cursors
  */
 static unsigned int cursorthickness = 2;
+
+/*
+ * 1: render most of the lines/blocks characters without using the font for
+ *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
+ *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
+ * 0: disable (render all U25XX glyphs normally from the font).
+ */
+const int boxdraw = 1;
+const int boxdraw_bold = 1;
+
+/* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
+const int boxdraw_braille = 1;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -183,8 +200,6 @@ ResourcePref resources[] = {
 		{ "cursorColor",  STRING,  &colorname[256] },
 		{ "termname",     STRING,  &termname },
 		{ "shell",        STRING,  &shell },
-		{ "xfps",         INTEGER, &xfps },
-		{ "actionfps",    INTEGER, &actionfps },
 		{ "blinktimeout", INTEGER, &blinktimeout },
 		{ "bellvolume",   INTEGER, &bellvolume },
 		{ "tabspaces",    INTEGER, &tabspaces },
