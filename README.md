@@ -29,10 +29,10 @@ use this repo as src for nixpkgs st override.
 
 ## Other st patches
 
-- Vertcenter
-- Scrollback
-- font2
-- updated to latest version 0.8.2
++ Vertcenter
++ Scrollback
++ font2
++ updated to latest version 0.8.2
 
 ## How to configure dynamically with Xresources
 
