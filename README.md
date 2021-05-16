@@ -7,8 +7,8 @@ The main reason for this fork is the possibility to add the changes i need and u
 
 ## Look and feel
 <p align="center">
-![2021-05-16_22-17-47](https://user-images.githubusercontent.com/49302467/118409768-c1563700-b694-11eb-92d3-665be9ad4747.png)
-![2021-05-16_23-13-18](https://user-images.githubusercontent.com/49302467/118411276-5d377100-b69c-11eb-8cd6-5852a1f0d5af.png)
+<span><img src="https://user-images.githubusercontent.com/49302467/118409768-c1563700-b694-11eb-92d3-665be9ad4747.png" height="187" /></span>
+<span><img src="https://user-images.githubusercontent.com/49302467/118411276-5d377100-b69c-11eb-8cd6-5852a1f0d5af.png" height="187" /></span>
 </p>
 
 ## Unique features (using dmenu)
