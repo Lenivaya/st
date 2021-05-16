@@ -1,11 +1,15 @@
 My fork of
 [the fork](https://github.com/LukeSmithxyz/st) of the [suckless terminal (st)](https://st.suckless.org/)
 
-Here some minor changes to cursor theme and custom shell.nix which very helpfull to build
-and test.
+There are some minor changes to cursor theme and custom shell.nix which is very helpful for building, testing, and patching st by myself.
 
-The main reason for this fork is the possibility to add the changes i need and
-use this repo as src for nixpkgs st override.
+The main reason for this fork is the possibility to add the changes i need and use this repo as src for nixpkgs st override.
+
+## Look and feel
+<p align="center">
+![2021-05-16_22-17-47](https://user-images.githubusercontent.com/49302467/118409768-c1563700-b694-11eb-92d3-665be9ad4747.png)
+![2021-05-16_23-13-18](https://user-images.githubusercontent.com/49302467/118411276-5d377100-b69c-11eb-8cd6-5852a1f0d5af.png)
+</p>
 
 ## Unique features (using dmenu)
 
@@ -25,14 +29,14 @@ use this repo as src for nixpkgs st override.
 + Compatibility with `Xresources` and `pywal` for dynamic colors.
 + Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
 + Transparency/alpha, which is also adjustable from your `Xresources`.
-+ Default font is system "mono" at 14pt, meaning the font will match your system font.
++ Default font is system "mono" at 12pt, meaning the font will match your system font.
 
 ## Other st patches
 
-+ Vertcenter
-+ Scrollback
++ Boxdraw
++ Ligatures
 + font2
-+ updated to latest version 0.8.2
++ updated to latest version 0.8.4
 
 ## How to configure dynamically with Xresources
 
